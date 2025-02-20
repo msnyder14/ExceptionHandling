@@ -41,8 +41,9 @@ namespace ExceptionHandling
             }
             catch (FormatException ex)
             {
-                log.Error("Invalid number format.", ex);
-                Console.WriteLine("Error: The file does not contain a valid number.");
+                //log.Error("Invalid number format.", ex);
+                //Console.WriteLine("Error: The file does not contain a valid number.");
+                throw new NumberFormatException("Invalid number format encountered in input file.", ex);
             }
             catch (DivideByZeroException ex)
             {
